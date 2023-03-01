@@ -1,0 +1,88 @@
+{
+  "name": "jotabank-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "generators": {},
+  "sourceRoot": "apps/jotabank-app/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "options": {
+        "outputPath": "dist/apps/jotabank-app",
+        "index": "apps/jotabank-app/src/index.html",
+        "main": "apps/jotabank-app/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/jotabank-app/tsconfig.app.json",
+        "assets": [
+          "apps/jotabank-app/src/favicon.ico",
+          "apps/jotabank-app/src/assets"
+        ],
+        "styles": [
+          "apps/jotabank-app/src/styles.css",
+          "node_modules/primeicons/primeicons.css",
+          "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+          "node_modules/primeng/resources/primeng.min.css"
+        ],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "jotabank-app:build:production"
+        },
+        "development": {
+          "browserTarget": "jotabank-app:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "jotabank-app:build"
+      }
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "polyfills": ["zone.js", "zone.js/testing"],
+        "tsConfig": "apps/jotabank-app/tsconfig.spec.json",
+        "assets": [
+          "apps/jotabank-app/src/favicon.ico",
+          "apps/jotabank-app/src/assets"
+        ],
+        "styles": ["apps/jotabank-app/src/styles.css"],
+        "scripts": []
+      }
+    }
+  }
+}
