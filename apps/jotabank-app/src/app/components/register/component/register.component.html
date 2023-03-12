@@ -1,0 +1,35 @@
+<div class="center">
+  <h1>Cadastre-se</h1>
+</div>
+
+<p-card>
+  <div class="field">
+    <label for="nome" class="block">Nome</label>
+    <input id="nome" type="text" pInputText [(ngModel)]="nome"/>
+  </div>
+
+  <div class="field">
+    <label for="cpf" class="block">CPF</label>
+    <input id="cpf" type="text" pInputText [(ngModel)]="cpf"/>
+  </div>
+
+  <div class="field">
+    <label for="email" class="block">E-mail</label>
+    <input id="email" type="email" pInputText [(ngModel)]="email"/>
+  </div>
+
+  <div class="field">
+    <label for="dataNascimento" class="block">Data de Nascimento</label>
+    <input id="dataNascimento" type="number" pInputText [(ngModel)]="dataNascimento"/>
+  </div>
+
+  <div class="field">
+    <label for="password" class="block">Password</label>
+    <input id="password" type="password" pInputText [(ngModel)]="password"/>
+  </div>
+
+  <div class="mr-4 inline-block">
+    <p-button routerLink="/home" label="Voltar"></p-button>
+  </div>
+</p-card>
+
