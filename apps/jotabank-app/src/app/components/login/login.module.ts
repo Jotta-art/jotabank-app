@@ -6,23 +6,24 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {LoginRoutingModule} from "./login-routing.module";
 import {ButtonModule} from "primeng/button";
 import {CardModule} from "primeng/card";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ChipsModule} from "primeng/chips";
 
 @NgModule({
   declarations: [
     LoginComponent
   ],
-  imports: [
-    CommonModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    LoginRoutingModule,
-    ButtonModule,
-    CardModule,
-    FormsModule,
-    ChipsModule
-  ],
+    imports: [
+        CommonModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        LoginRoutingModule,
+        ButtonModule,
+        CardModule,
+        FormsModule,
+        ChipsModule,
+        ReactiveFormsModule
+    ],
   exports: [
     LoginComponent
   ]
