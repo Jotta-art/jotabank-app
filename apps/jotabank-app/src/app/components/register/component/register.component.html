@@ -3,33 +3,46 @@
 </div>
 
 <p-card>
-  <div class="field">
-    <label for="nome" class="block">Nome</label>
-    <input id="nome" type="text" pInputText [(ngModel)]="nome"/>
-  </div>
+  <form [formGroup]="form" (ngSubmit)="register()">
+    <span class="p-float-label mb-4">
+      <input id="nome" type="text" pInputText [(ngModel)]="nome" formControlName="nome">
+      <label for="nome">Nome</label>
+      <small class="p-error block"
+             *ngIf="form.get('nome')?.invalid && form.get('nome')?.dirty">Nome é obrigatório</small>
+    </span>
 
-  <div class="field">
-    <label for="cpf" class="block">CPF</label>
-    <input id="cpf" type="text" pInputText [(ngModel)]="cpf"/>
-  </div>
+    <span class="p-float-label mb-4">
+      <input id="cpf" type="text" pInputText [(ngModel)]="cpf" formControlName="cpf">
+      <label for="cpf">CPF</label>
+      <small class="p-error block" *ngIf="form.get('cpf')?.invalid && form.get('cpf')?.dirty">CPF é obrigatório</small>
+    </span>
 
-  <div class="field">
-    <label for="email" class="block">E-mail</label>
-    <input id="email" type="email" pInputText [(ngModel)]="email"/>
-  </div>
+    <span class="p-float-label mb-4">
+      <input id="email" type="text" pInputText [(ngModel)]="email" formControlName="email">
+      <label for="email">E-mail</label>
+      <small class="p-error block"
+             *ngIf="form.get('email')?.invalid && form.get('email')?.dirty">E-mail é obrigatório</small>
+    </span>
 
-  <div class="field">
-    <label for="dataNascimento" class="block">Data de Nascimento</label>
-    <input id="dataNascimento" type="number" pInputText [(ngModel)]="dataNascimento"/>
-  </div>
+    <span class="p-float-label mb-4">
+      <input id="dataNascimento" type="text" pInputText [(ngModel)]="dataNascimento" formControlName="dataNascimento">
+      <label for="dataNascimento">Data de Nascimento</label>
+      <small class="p-error block" *ngIf="form.get('dataNascimento')?.invalid && form.get('dataNascimento')?.dirty">Data de Nascimento é obrigatório</small>
+    </span>
 
-  <div class="field">
-    <label for="password" class="block">Password</label>
-    <input id="password" type="password" pInputText [(ngModel)]="password"/>
-  </div>
+    <span class="p-float-label mb-4">
+      <input id="password" type="password" pInputText [(ngModel)]="password" formControlName="password">
+      <label for="password">Password</label>
+      <small class="p-error block" *ngIf="form.get('password')?.invalid && form.get('password')?.dirty">Password é obrigatório</small>
+    </span>
 
-  <div class="mr-4 inline-block">
-    <p-button routerLink="/home" label="Voltar"></p-button>
-  </div>
+    <div class="mr-2 inline-block">
+      <p-button routerLink="#" label="Cadastrar" type="submit" [disabled]="form.invalid"></p-button>
+    </div>
+
+    <div class="inline-block">
+      <p-button routerLink="/home" label="Voltar"></p-button>
+    </div>
+  </form>
 </p-card>
 
