@@ -1,3 +1,20 @@
-Teste LOGIN
+<div class="center">
+  <h1>Sign in to your JotaBank</h1>
+</div>
 
-<p-button routerLink="/home" label="Voltar"></p-button>
+<p-card>
+  <div class="field">
+    <label for="username" class="block">Username</label>
+    <input id="username" type="username" pInputText [(ngModel)]="username"/>
+  </div>
+
+  <div class="field">
+    <label for="password" class="block">Password</label>
+    <input id="password" type="password" pInputText [(ngModel)]="password"/>
+  </div>
+
+  <div class="mr-4 inline-block">
+    <p-button routerLink="/home" label="Voltar"></p-button>
+  </div>
+</p-card>
+
