@@ -9,11 +9,11 @@ export class RegisterComponent {
   dataNascimento: any;
   password: any;
   form = this.formBuilder.group({
-    nome: ['', Validators.required, Validators.pattern('[a-zA-Z ]*')],
+    nome: ['', Validators.compose([Validators.required, Validators.pattern('[a-zA-Z ]*')])],
     cpf: ['', Validators.required],
-    email: ['', Validators.required, Validators.email],
+    email: ['', Validators.compose([Validators.required, Validators.email])],
     dataNascimento: ['', Validators.required],
-    password: ['', Validators.required, Validators.minLength(10)],
+    password: ['', Validators.compose([Validators.required, Validators.minLength(10)])],
   });
 
   constructor(private formBuilder: FormBuilder) {
