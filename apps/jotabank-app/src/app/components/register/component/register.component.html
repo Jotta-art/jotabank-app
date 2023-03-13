@@ -5,33 +5,34 @@
 <p-card>
   <form [formGroup]="form" (ngSubmit)="register()">
     <span class="p-float-label mb-4">
-      <input id="nome" type="text" pInputText [(ngModel)]="nome" formControlName="nome">
+      <input id="nome" type="text" pInputText [(ngModel)]="nome" formControlName="nome" pattern="[a-zA-Z ]*">
       <label for="nome">Nome</label>
       <small class="p-error block"
              *ngIf="form.get('nome')?.invalid && form.get('nome')?.dirty">Nome é obrigatório</small>
     </span>
 
     <span class="p-float-label mb-4">
-      <input id="cpf" type="text" pInputText [(ngModel)]="cpf" formControlName="cpf">
+      <p-inputMask id="cpf" type="text" [(ngModel)]="cpf" formControlName="cpf" mask="999.999.999-99"></p-inputMask>
       <label for="cpf">CPF</label>
       <small class="p-error block" *ngIf="form.get('cpf')?.invalid && form.get('cpf')?.dirty">CPF é obrigatório</small>
     </span>
 
     <span class="p-float-label mb-4">
-      <input id="email" type="text" pInputText [(ngModel)]="email" formControlName="email">
+      <input id="email" type="text" pInputText [(ngModel)]="email" email="true" formControlName="email">
       <label for="email">E-mail</label>
       <small class="p-error block"
              *ngIf="form.get('email')?.invalid && form.get('email')?.dirty">E-mail é obrigatório</small>
     </span>
 
     <span class="p-float-label mb-4">
-      <input id="dataNascimento" type="text" pInputText [(ngModel)]="dataNascimento" formControlName="dataNascimento">
+      <p-inputMask id="dataNascimento" type="text" [(ngModel)]="dataNascimento" formControlName="dataNascimento"
+                   mask="99/99/9999"></p-inputMask>
       <label for="dataNascimento">Data de Nascimento</label>
       <small class="p-error block" *ngIf="form.get('dataNascimento')?.invalid && form.get('dataNascimento')?.dirty">Data de Nascimento é obrigatório</small>
     </span>
 
     <span class="p-float-label mb-4">
-      <input id="password" type="password" pInputText [(ngModel)]="password" formControlName="password">
+      <input id="password" type="password" pInputText [(ngModel)]="password" formControlName="password" minlength="10">
       <label for="password">Password</label>
       <small class="p-error block" *ngIf="form.get('password')?.invalid && form.get('password')?.dirty">Password é obrigatório</small>
     </span>

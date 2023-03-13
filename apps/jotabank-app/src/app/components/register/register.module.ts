@@ -9,6 +9,7 @@ import {ChipsModule} from "primeng/chips";
 import {ButtonModule} from "primeng/button";
 import {RouterLink} from "@angular/router";
 import {RegisterRoutingModule} from "./register-routing.module";
+import {InputMaskModule} from "primeng/inputmask";
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {RegisterRoutingModule} from "./register-routing.module";
         ButtonModule,
         RouterLink,
         RegisterRoutingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        InputMaskModule
     ],
   exports: [
     RegisterComponent
