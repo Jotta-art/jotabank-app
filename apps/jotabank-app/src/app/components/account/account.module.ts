@@ -4,6 +4,8 @@ import {CommonModule} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AccountRoutingModule} from "./account-routing.module";
+import {MenubarModule} from "primeng/menubar";
+import {InputTextModule} from "primeng/inputtext";
 
 @NgModule({
   declarations: [
@@ -13,7 +15,9 @@ import {AccountRoutingModule} from "./account-routing.module";
     CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AccountRoutingModule
+    AccountRoutingModule,
+    MenubarModule,
+    InputTextModule
   ],
   exports: [
     AccountComponent
