@@ -1,7 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {MenuItem} from "primeng/api";
 
-@Component({selector: 'app-account', templateUrl: 'account.component.html'})
+@Component({selector: 'app-account', templateUrl: 'account.component.html', styleUrls: ['account.component.scss']})
 export class AccountComponent implements OnInit {
   items: MenuItem[] = [];
 

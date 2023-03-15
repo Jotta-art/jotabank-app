@@ -6,6 +6,8 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {AccountRoutingModule} from "./account-routing.module";
 import {MenubarModule} from "primeng/menubar";
 import {InputTextModule} from "primeng/inputtext";
+import {PanelModule} from "primeng/panel";
+import {ButtonModule} from "primeng/button";
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import {InputTextModule} from "primeng/inputtext";
     BrowserAnimationsModule,
     AccountRoutingModule,
     MenubarModule,
-    InputTextModule
+    InputTextModule,
+    PanelModule,
+    ButtonModule
   ],
   exports: [
     AccountComponent
