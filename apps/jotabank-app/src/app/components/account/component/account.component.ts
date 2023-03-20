@@ -6,6 +6,7 @@ export class AccountComponent implements OnInit {
   items: MenuItem[] = [];
   showAbaConta = true;
   showAbaCartoes = false;
+  showPanelExtrato = false;
 
   ngOnInit(): void {
     this.items = [
@@ -15,6 +16,7 @@ export class AccountComponent implements OnInit {
         command: () => {
           this.showAbaConta = true;
           this.showAbaCartoes = false;
+          this.showPanelExtrato = false;
         }
       },
       {
@@ -38,5 +40,15 @@ export class AccountComponent implements OnInit {
         icon: 'pi pi-fw pi-power-off'
       }
     ];
+  }
+
+  showExtrato() {
+    this.showPanelExtrato = true;
+    this.showAbaConta = false;
+  }
+
+  hideExtrato() {
+    this.showAbaConta = true;
+    this.showPanelExtrato = false;
   }
 }
