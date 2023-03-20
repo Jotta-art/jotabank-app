@@ -8,7 +8,7 @@
 </p-menubar>
 
 <div *ngIf="showAbaConta">
-  <div class="mt-4 ml-4">
+  <div class="mt-4 w-6 ml-4">
     <p-panel header="Saldo em Conta Corrente">
       R$ 1.000,00
 
@@ -18,42 +18,38 @@
     </p-panel>
   </div>
 
-  <div class="center">
-    <div class="mt-4 w-3 ml-4 inline-block vertical-align-top">
-      <p-panel header="Pix">
-        <div class="center">
-          <div class="inline-block m-2">
-            <p-button routerLink="#" label="Pagar com QR Code"></p-button>
-          </div>
-          <div class="inline-block m-2">
-            <p-button routerLink="#" label="Transferir"></p-button>
-          </div>
-          <div class="inline-block m-2">
-            <p-button routerLink="#" label="Receber"></p-button>
-          </div>
-          <div class="inline-block m-2">
-            <p-button routerLink="#" label="Saque e Troco"></p-button>
-          </div>
-        </div>
-      </p-panel>
-    </div>
+  <div class="mt-4 w-6 ml-4">
+    <p-panel header="Pix">
+      <div class="inline-block m-2">
+        <p-button routerLink="#" label="Pagar com QR Code"></p-button>
+      </div>
+      <div class="inline-block m-2">
+        <p-button routerLink="#" label="Transferir"></p-button>
+      </div>
+      <div class="inline-block m-2">
+        <p-button routerLink="#" label="Receber"></p-button>
+      </div>
+      <div class="inline-block m-2">
+        <p-button routerLink="#" label="Saque e Troco"></p-button>
+      </div>
+    </p-panel>
+  </div>
 
-    <div class="mt-4 w-3 ml-4 inline-block vertical-align-top">
-      <p-panel header="JotaBank Invest">
-        <h3>Total Bruto</h3>
-        <div>
-          <p>R$ 2.000,00</p>
-        </div>
+  <div class="mt-4 w-6 ml-4">
+    <p-panel header="JotaBank Invest">
+      <h3>Total Bruto</h3>
+      <div>
+        <p>R$ 2.000,00</p>
+      </div>
 
-        <div class="inline-block mr-2 mt-2">
-          <p-button routerLink="#" label="Ver detalhes"></p-button>
-        </div>
+      <div class="inline-block mr-2 mt-2">
+        <p-button routerLink="#" label="Ver detalhes"></p-button>
+      </div>
 
-        <div class="inline-block">
-          <p-button routerLink="#" label="Investir"></p-button>
-        </div>
-      </p-panel>
-    </div>
+      <div class="inline-block">
+        <p-button routerLink="#" label="Investir"></p-button>
+      </div>
+    </p-panel>
   </div>
 </div>
 
