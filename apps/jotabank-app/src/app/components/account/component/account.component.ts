@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import {MenuItem} from "primeng/api";
+import {Router} from "@angular/router";
 
 @Component({selector: 'app-account', templateUrl: 'account.component.html', styleUrls: ['account.component.scss']})
 export class AccountComponent implements OnInit {
@@ -7,6 +8,9 @@ export class AccountComponent implements OnInit {
   showAbaConta = true;
   showAbaCartoes = false;
   showPanelExtrato = false;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
     this.items = [
@@ -38,6 +42,13 @@ export class AccountComponent implements OnInit {
       {
         label: 'Ajuda',
         icon: 'pi pi-fw pi-power-off'
+      },
+      {
+        label: 'Log out',
+        icon: 'pi pi-fw pi-power-off',
+        command: () => {
+          this.router.navigate(['/login']);
+        }
       }
     ];
   }
